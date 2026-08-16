@@ -165,7 +165,7 @@ func (o *Optimizer) Run(prob *Problem) Result {
 func dominates(a, b Vector) bool {
 	better := false
 	for i := range a {
-		if a[i] >= b[i] {
+		if a[i] > b[i] {
 			return false
 		}
 		if a[i] < b[i] {
